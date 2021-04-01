@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DonationsController;
+use App\Http\Controllers\CampaignsController;
 use App\Http\Controllers\MakePaymentController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,16 +16,19 @@ use App\Http\Controllers\MakePaymentController;
 |
 */
 
-Route::get('/', function () {
-    return view('guest');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 // Route::get('/donations', [DonationsController::class, 'index'])->name('donations');
 
-Route::resource('/donations', DonationsController::class);
+Route::resource('/campaigns', CampaignsController::class);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
+Route::get('/status', function() {
+    return view('campaigns.notification');
+});
 
 Route::post('/makePayment', [MakePaymentController::class, 'donate']);

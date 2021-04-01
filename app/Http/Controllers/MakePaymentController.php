@@ -15,7 +15,7 @@ class MakePaymentController extends Controller
      */
     public function index()
     {
-       return view('donations.make-donation');
+       return view('campaigns.make-donation');
     }
 
     /**
@@ -42,16 +42,18 @@ class MakePaymentController extends Controller
             "cf995574e54bd02ce8ca7d8993dc6fefcb29ef69",
             "71385aec-c4fd-40c4-8990-c8065b9ae73c",
             "payunit_sand_lUtifX0h9",
-            "http://127.0.0.1:8000/makePayment",
-            "http://127.0.0.1:8000/notification",
-            "mode",
-            "description",
-            "purchaseRef",
+            "http://127.0.0.1:8000/status",
+            "http://127.0.0.1:8000/notify",
+            "test",
+            "Test Payments",
+            "",
             "XAF",
-            "name"
+            "Damue-cs"
        );
     
          $myPayment->makePayment($amount);
+
+         return $response->header();
     }
 
     /**
@@ -61,15 +63,7 @@ class MakePaymentController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-
-        $amountDonated = AmountDonated::create([
-            'donation_id' => $request->input('campaign_id'),
-            'donation_name' => $request->input('campaign_name'),
-            'message' => $request->input('message'),
-            'amount_donated' => $request->input('amount_donated')
-         ]);
-
-         return redirect('donations');
+        //
     }
 
     /**
@@ -106,6 +100,7 @@ class MakePaymentController extends Controller
         //
     }
 
+   
     /**
      * Remove the specified resource from storage.
      *
