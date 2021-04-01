@@ -23,12 +23,12 @@
     </div>
 
     <div class="form-group">
-        <label for="amount-donated">
+        <label for="amount_donated">
             Amount
         </label>
         <input 
         type="number" 
-        name="amount-donated" 
+        name="amount_donated" 
         placeholder="How Much Do you want to Donate?"
         class="form-control">
 

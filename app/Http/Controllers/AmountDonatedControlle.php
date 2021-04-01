@@ -3,11 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use App\Models\Donation;
 use App\Models\AmountDonated;
 
-class DonationsController extends Controller
+class AmountDonatedControlle extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +14,7 @@ class DonationsController extends Controller
      */
     public function index()
     {
-        $donations = DB::table('donations')->get();
-
-        return view('donations.view', ['donations' => $donations]);
+        //
     }
 
     /**
@@ -28,7 +24,7 @@ class DonationsController extends Controller
      */
     public function create()
     {
-        return view('donations.create');
+        return view('donations-form');
     }
 
     /**
@@ -39,13 +35,14 @@ class DonationsController extends Controller
      */
     public function store(Request $request)
     {
-    //   $donation = Donation::create([
-    //         'donation_name' => $request->input('name'),
-    //         'donation_purpose' => $request->input('purpose'),
-    //         'goal_amount' => $request->input('goal_amount')
-    //     ]);
+        // $amountDonated = AmountDonated::create([
+        //     'donation_id' => $request->input('campaign_id'),
+        //     'donation_name' => $request->input('campaign_name'),
+        //     'message' => $request->input('message'),
+        //     'amount_donated' => $request->input('amount_donated')
+        //  ]);
 
-    //     return redirect('donations');
+        //  return redirect('donations');
     }
 
     /**
@@ -67,8 +64,7 @@ class DonationsController extends Controller
      */
     public function edit($id)
     {
-    $donation = Donation::find($id);
-        return view('donations.make-donation', ['donation' => $donation]);
+        //
     }
 
     /**

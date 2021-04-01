@@ -9,7 +9,7 @@
            totam soluta at, aperiam possimus beatae exercitationem?
         </p>
       <div class="d-flex">
-          <a href="" class="btn btn-success mr-2">Start Donating &rarr;</a>
+          <a href="{{ url('donations') }}" class="btn btn-success mr-2">Start Donating &rarr;</a>
          <a href="" class="btn btn-primary">Open Donation &rarr;</a>
       </div>
   </div>

@@ -18,11 +18,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/flex.css') }}">
+    <link href="{{ asset('css/flex.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark py-2 shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -53,9 +53,9 @@
                                 </li>
                             @endif
                         @else
-                           <li class="nav-item"><a class="nav-link" href="/home">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="donations/create">Create A Campaign</a></li>
-                            <li class="nav-item"><a class="nav-link" href="donations">View Campaigns</a></li>
+                           <li class="nav-item"><a class="nav-link" href="{{ url('/home') }}">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ url('donations/create') }}">Create A Campaign</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ url('donations') }}">View Campaigns</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
