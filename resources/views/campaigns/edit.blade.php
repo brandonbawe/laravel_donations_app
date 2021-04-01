@@ -1,20 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
- <form action="/campaigns" method="POST" class="container">
-    @csrf
+<form action="/dashboard/{{ $campaign->id }}" method="POST" class="container">
+     @csrf
+    @method('PUT')
     <div class="form-group">
-        <label for="name">
+        <label for="campaign-name">
             Campaign Name
         </label>
-       <input type="text" class="form-control" name="name" id="" placeholder="Enter A name for the Campaign">
+       <input type="text" class="form-control" name="campaign-name" value="{{ $campaign->campaign_name }}" >
     </div>
     <div class="form-group">
-        <label for="purpose">
+        <label for="campaign-purpose">
             Purpose Of Campaign
         </label>
-    <textarea name="purpose" class="form-control" id="" cols="30" rows="10" placeholder="Enter the Purpose of This Campaign">
-
+    <textarea name="campaign-purpose" class="form-control" id="" cols="30" rows="10">
+      {{ $campaign->campaign_purpose }}
     </textarea>
     </div>
 
@@ -25,7 +26,7 @@
         <input 
         type="number" 
         name="goal_amount" 
-        placeholder="Enter A Target Amount"
+        value="{{ $campaign->goal_amount }}"
         class="form-control">
 
     </textarea>
@@ -35,13 +36,12 @@
         <input 
         type="submit" 
         class="btn btn-dark"
-        name="goal-amount" 
         id=""
-        value="Create Campaign">
+        value="Update">
 
     </textarea>
     </div>
  </form>
 
  @include('layouts.footer')
-@endsection
+ @endsection

@@ -3,26 +3,27 @@
 @section('content')
 
 <div class="container">
-  <div class="row">
+  <div class="campaign-grid">
     @foreach ($campaigns as $campaign)
-        <div class="card my-4 col-12 shadow-lg">
-          <div class="card-header">
+        <div class="campaign-card my-2 shadow">
+          <div class="">
               <h3>{{ $campaign->campaign_name }}</h3>
           </div>
-          <div class="card-body">
-              <p class="card-text">
-                  {{ $campaign->campaign_purpose }}
+          <div>
+              <p>
+                  {{Str::limit($campaign->campaign_purpose, 100)}}
               </p>
-
-              <p class="card-text"><b>2000XAF raised of {{ $campaign->goal_amount }}XAF</b></p>
+              <p><b>2000XAF raised of {{ $campaign->goal_amount }}XAF</b></p>
           </div>
-          <div class="card-footer d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center justify-content-between">
             <p class="pt-3"><b>Goal Amount:</b> {{ $campaign->goal_amount }}FCFA</p>
-            <a href="campaigns/{{ $campaign->id }}/edit" class="badge badge-dark badge-pill px-4 py-3">Donate</a>
+            <a href="campaigns/{{ $campaign->id }}/edit" class="button dark-btn">Donate</a>
           </div>
         </div>
     @endforeach
   </div>
 </div>
 
+
+@include('layouts.footer')
 @endsection

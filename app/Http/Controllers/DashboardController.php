@@ -3,13 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\PayUnit;
-use App\Models\AmountDonated;
-
 use Illuminate\Support\Facades\DB;
 use App\Models\Campaign;
 
-class MakePaymentController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +15,9 @@ class MakePaymentController extends Controller
      */
     public function index()
     {
-       return view('campaigns.make-donation');
+         $campaigns = DB::table('campaigns')->get();
+
+        return view('dashboard', ['campaigns' => $campaigns]);
     }
 
     /**
@@ -37,34 +36,8 @@ class MakePaymentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function donate(Request $request)
+    public function store(Request $request)
     {
-          $amount = $request->input('amount_donated');
-
-          $myPayment = new PayUnit(
-            "cf995574e54bd02ce8ca7d8993dc6fefcb29ef69",
-            "71385aec-c4fd-40c4-8990-c8065b9ae73c",
-            "payunit_sand_lUtifX0h9",
-            "http://127.0.0.1:8000/status",
-            "http://127.0.0.1:8000/notify",
-            "test",
-            "Test Payments",
-            "",
-            "XAF",
-            "Damue-cs"
-       );
-    
-         $myPayment->makePayment($amount);
-
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request) {
         //
     }
 
@@ -87,7 +60,8 @@ class MakePaymentController extends Controller
      */
     public function edit($id)
     {
-        
+        $campaign = Campaign::find($id);
+        return view('campaigns.edit')->with('campaign', $campaign);
     }
 
     /**
@@ -99,10 +73,16 @@ class MakePaymentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $campaign = Campaign::where('id', $id)
+                        ->update([ 
+                        'campaign_name' => $request->input('campaign-name'),
+                        'campaign_purpose' => $request->input('campaign-purpose'),
+                        'goal_amount' => $request->input('goal_amount')
+                        ]);
+
+        return redirect('/dashboard');
     }
 
-   
     /**
      * Remove the specified resource from storage.
      *
@@ -111,6 +91,8 @@ class MakePaymentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('campaigns')->where('id', '=', $id)->delete();
+
+        return redirect('/dashboard');
     }
 }

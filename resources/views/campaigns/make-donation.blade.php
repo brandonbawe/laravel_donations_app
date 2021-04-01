@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
- <form action="/makePayment" method="POST" class="container">
+ <form action="/makePayment" method="POST" class="container my-5">
     @csrf
     <div class="form-group">
         <label for="name">
@@ -45,4 +45,6 @@
     </textarea>
     </div>
  </form>
+
+ @include('layouts.footer')
 @endsection

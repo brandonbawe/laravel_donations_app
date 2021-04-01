@@ -44,7 +44,7 @@ class CampaignsController extends Controller
             'goal_amount' => $request->input('goal_amount')
         ]);
 
-        return redirect('campaigns');
+        return redirect('dashboard');
     }
 
     /**
@@ -68,7 +68,6 @@ class CampaignsController extends Controller
     {
         $campaign = Campaign::find($id);
         return view('campaigns.make-donation', ['campaign' => $campaign]);
-
     }
 
     /**

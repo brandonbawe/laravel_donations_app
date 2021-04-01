@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CampaignsController;
 use App\Http\Controllers\MakePaymentController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,8 @@ Route::get('/', [HomeController::class, 'index']);
 
 // Route::get('/donations', [DonationsController::class, 'index'])->name('donations');
 
-Route::resource('/campaigns', CampaignsController::class);
+Route::resource('/campaigns', CampaignsController::class)->middleware(['auth'])->name('campaigns', 'campaign/create');
+Route::resource('/dashboard', DashboardController::class);
 
 Auth::routes();
 
