@@ -2,7 +2,7 @@
 
 @section('content')
  <div class="container">
-        <h3 class="text-center">Thanks For Donating 🙏🏾 {{ $name }}</h3>
+        <h3 class="text-center">Thanks For Donating 🙏🏾</h3>
          <h4 class="display-3 text-center">
              Transaction Status: <b class="text-success">{{ app('request')->input('transaction_status') }}</b> 
          </h4>

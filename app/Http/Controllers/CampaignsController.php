@@ -20,10 +20,10 @@ class CampaignsController extends Controller
      */
     public function index(Request $request)
     {
-    //   $campaigns = DB::table('campaigns')->get();
+      $campaigns = DB::table('campaigns')->get();
 
-    //     return view('campaigns.view', ['campaigns' => $campaigns]);
-    dd($request->fullUrl());
+     return view('campaigns.view', ['campaigns' => $campaigns]);
+    
     }
 
     /**
