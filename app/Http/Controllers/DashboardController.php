@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Auth;
 use App\Models\Campaign;
 
 class DashboardController extends Controller
@@ -15,7 +16,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-         $campaigns = DB::table('campaigns')->get();
+         $campaigns = Auth::user()->Campaign()->get();
 
         return view('dashboard', ['campaigns' => $campaigns]);
     }

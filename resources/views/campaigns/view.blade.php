@@ -17,7 +17,7 @@
           </div>
           <div class="d-flex align-items-center justify-content-between">
             <p class="pt-3"><b>Goal Amount:</b> {{ $campaign->goal_amount }}FCFA</p>
-            <a href="campaigns/{{ $campaign->id }}/edit" class="button dark-btn">Donate</a>
+            <a href="/campaigns/{{ $campaign->id }}" class="btn dark-btn">Read More</a>
           </div>
         </div>
     @endforeach

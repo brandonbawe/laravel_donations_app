@@ -2,6 +2,7 @@
 
 @section('content')
   <div class="container">
+    
       <a href="{{ url('campaigns/create') }}" class="btn btn-primary">Create A Campaign</a>
      <table class="table table-bordered table-striped my-5">
     <thead>
@@ -21,7 +22,7 @@
             <td>{{ $campaign->goal_amount }}</td>
             <td>{{ $campaign->created_at }}</td>
             <td class="d-flex justify-content-around">
-                <a href="" class="btn btn-success px-4">Show</a>
+                <a href="/campaigns/{{ $campaign->id }}" class="btn btn-success px-4">Preview</a>
                 <a href="/dashboard/{{ $campaign->id }}/edit" class="btn btn-dark px-4">Edit</a>
                 <form action="/dashboard/{{ $campaign->id }}" method="POST">
                 @csrf
@@ -36,5 +37,4 @@
   </table>
   </div>
 
-  @include('layouts.footer')
 @endsection

@@ -13,5 +13,5 @@ class Campaign extends Model
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['campaign_name', 'campaign_purpose', 'goal_amount'];
+    protected $fillable = ['campaign_name', 'campaign_purpose', 'goal_amount', 'user_id'];
 }

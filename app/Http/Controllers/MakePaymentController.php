@@ -18,7 +18,8 @@ class MakePaymentController extends Controller
      */
     public function index()
     {
-       return view('campaigns.make-donation');
+      return view('campaigns.make-donation');
+      
     }
 
     /**

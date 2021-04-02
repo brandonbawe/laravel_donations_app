@@ -4,20 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Campaign;
 
 class CampaignsController extends Controller
 {
+
+    public function __construct() {
+        $this->middleware('auth')->except('edit');
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-      $campaigns = DB::table('campaigns')->get();
+    //   $campaigns = DB::table('campaigns')->get();
 
-        return view('campaigns.view', ['campaigns' => $campaigns]);
+    //     return view('campaigns.view', ['campaigns' => $campaigns]);
+    dd($request->fullUrl());
     }
 
     /**
@@ -38,10 +44,13 @@ class CampaignsController extends Controller
      */
     public function store(Request $request)
     {
+        $userid = Auth::user()->id;
+         $request['user_id'] = $userid;
           $campaign = Campaign::create([
+            'user_id' => $userid,
             'campaign_name' => $request->input('name'),
             'campaign_purpose' => $request->input('purpose'),
-            'goal_amount' => $request->input('goal_amount')
+            'goal_amount' => $request->input('goal_amount'),
         ]);
 
         return redirect('dashboard');
@@ -55,7 +64,9 @@ class CampaignsController extends Controller
      */
     public function show($id)
     {
-        //
+     $campaign = Campaign::find($id);
+
+     return view('campaigns.show-details', ['campaign' => $campaign]);
     }
 
     /**
@@ -68,6 +79,7 @@ class CampaignsController extends Controller
     {
         $campaign = Campaign::find($id);
         return view('campaigns.make-donation', ['campaign' => $campaign]);
+        
     }
 
     /**

@@ -72,6 +72,11 @@ h1 {
     color: #000;
 }
 
+.blue-btn {
+    background: #3f76e1;
+    color: #fff;
+}
+
 .white-btn:hover {
     color: #000;
     text-decoration: none;
@@ -269,4 +274,26 @@ footer {
 .social-media-links svg:hover {
     fill: #e96955;
     cursor: pointer;
+}
+
+/* ===============  Campaign Details Page Styles  ====================== */
+.campaign-details {
+    width: 87vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.campaign-details-inner {
+    width: 60%;
+}
+
+.campaign-img {
+    width: 100%;
+    background-image: url('../images/campaign-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25rem;
+    border-radius: 1rem;
 }

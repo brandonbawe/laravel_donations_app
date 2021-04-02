@@ -2,11 +2,14 @@
 
 @section('content')
  <div class="container">
-     <div class="card shadow-lg">
-         <p class="card-text">
-             Thanks for Donating!!!
-         </p>
-     </div>
+        <h3 class="text-center">Thanks For Donating 🙏🏾 {{ $name }}</h3>
+         <h4 class="display-3 text-center">
+             Transaction Status: <b class="text-success">{{ app('request')->input('transaction_status') }}</b> 
+         </h4>
+
+         <h4 class="display-3 text-center">
+           Transaction Amount: <b class="text-success">{{ app('request')->input('transaction_amount') }}</b>  
+         </h4>
  </div>
 
 @endsection

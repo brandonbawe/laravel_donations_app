@@ -9,11 +9,11 @@
         <p class="lead py-2 gray-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, doloremque. Placeat itaque non ipsam minima quo provident. Culpa, nisi! Rerum similique illum ipsa maxime </p>
 
           <div class="hero-buttons-container">
-            <a href="" class="button dark-btn shadow-lg">
-              Get Started &rarr;
+            <a href="{{ url('dashboard') }}" class="button dark-btn shadow-lg">
+              Get Started 
             </a>
-            <a href="{{ url('donations') }}" class="ml-4 button white-btn shadow-lg">
-              ❤️ Start Donating
+            <a href="{{ url('campaigns') }}" class="ml-4 button white-btn shadow-lg">
+               Start Donating
             </a>
           </div>
       </div>
@@ -97,11 +97,11 @@
               <p>
                   {{Str::limit($campaign->campaign_purpose, 100)}}
               </p>
-              <p><b>2000XAF raised of {{ $campaign->goal_amount }}XAF</b></p>
+              <p class="orange-text"><b>2000XAF raised of {{ $campaign->goal_amount }}XAF</b></p>
           </div>
           <div class="d-flex align-items-center justify-content-between">
             <p class="pt-3"><b>Goal Amount:</b> {{ $campaign->goal_amount }}FCFA</p>
-            <a href="campaigns/{{ $campaign->id }}/edit" class="button dark-btn">Donate</a>
+            <a href="/campaigns/{{ $campaign->id }}" class="btn dark-btn">Read More</a>
           </div>
         </div>
           @endforeach
