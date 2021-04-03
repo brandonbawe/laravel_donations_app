@@ -11,7 +11,7 @@ class CampaignsController extends Controller
 {
 
     public function __construct() {
-        $this->middleware('auth')->except('edit');
+        $this->middleware('auth')->except('edit', 'show');
     }
     /**
      * Display a listing of the resource.
