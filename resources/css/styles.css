@@ -2,35 +2,17 @@
 body {
     background-color: #d8dae041;
 }
-
+/* ==================== Landing Page Hero ============== */
 .hero-section {
     width: 100vw;
     position: relative;
     top: -3rem;
     background-image: url('../images/hero-bg.jpg');
+    background-position: left;
     background-size: cover;
     height: 40rem;
 }
 
-.background-overlay {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-    to top,
-    rgba(27, 31, 65, 0.90) 0%,
-    rgba(27, 31, 65, 0.925) 100%
-  );
-}
-/* Utilies */
-.orange-text {
-    color: #ed6754;
-}
-.blue-text {
-    color: #21243d;
-}
-.gray-text {
-    color: #d3d3d3;
-}
 .hero-section-inner {
     width: 90%;
     display: flex;
@@ -52,9 +34,29 @@ h1 {
     font-weight: 700;
 }
 .hero-text h1 {
-    width: 95%;
+    width: 90%;
     font-weight: 700;
 }
+.background-overlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+    to top,
+    rgba(27, 31, 65, 0.90) 0%,
+    rgba(27, 31, 65, 0.925) 100%
+  );
+}
+/* ========================= Utilies ================== */
+.orange-text {
+    color: #ed6754;
+}
+.blue-text {
+    color: #21243d;
+}
+.gray-text {
+    color: #d3d3d3;
+}
+
 
 .button {
     border: none;
@@ -139,8 +141,8 @@ h1 {
     width: 100%;
 }
 
-.everything-you-need-to-know-section h2 {
-    width: 30%;
+.everything-you-need-to-know-section h1 {
+    width: 40%;
     font-weight: 700;
 }
 
@@ -173,7 +175,7 @@ h1 {
     top: -1rem;
 }
 
-.play-your-part {
+.curly-text {
     color: #ed6754;
     font-family: 'Dancing Script', cursive;
 }
@@ -228,8 +230,6 @@ h1 {
 footer {
     width: 100vw;
     background-color: #1b1f41;
-     /* position: relative;
-    bottom: 0rem; */
     padding: 3rem 0;
 }
 
@@ -268,7 +268,7 @@ footer {
 }
 
 .social-media-links {
-    width: 13%;
+    width: 16%;
     display: flex;
     justify-content: space-between;
 }
@@ -278,9 +278,9 @@ footer {
     cursor: pointer;
 }
 
-/* ===============  Campaign Details Page Styles  ====================== */
+/* =============== Campaign Details Page Styles  ====================== */
 .campaign-details {
-    width: 87vw;
+    width: 80vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -288,7 +288,7 @@ footer {
 }
 
 .campaign-details-inner {
-    width: 60%;
+    width: 100%;
 }
 
 .campaign-img {
@@ -300,116 +300,296 @@ footer {
     border-radius: 1rem;
 }
 
+.campaign-info {
+  width: 100%;
+}
+
+.campaign-progress {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.campaign-progress-bar {
+    width: 40%;
+    height: 0.5rem;
+    border-radius: 5px;
+    background-color:  #1b1f41c5;
+}
+
+.progress-bar-inner {
+    width: 70%;
+    height: 0.5rem;
+    border-radius: 5px;
+    background-color: #e96955e6;
+}
+
+.campaign-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.campaign-buttons .button {
+    width: 48%;
+}
+
+/* ============ End of Campaign Details Page Styles ============ */
+
 /* ============== Mobile Design =================== */
 
-@media screen and (max-width: 375px) {
-.hero-section-inner {
-      width: 90%;
-     display: flex;
-     margin: 0 auto;
-}
+@media screen and (max-width: 540px) {
+    .hero-section-inner {
+        width: 90%;
+        display: flex;
+        margin: 0 auto;
+    }
 
-.hero-text {
+    .hero-text {
+        width: 100%;
+        display: flex;
+        padding-top: 8rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text p {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        width: 100%;
+    }
+
+    .hero-section-media {
+        display: none;
+    }
+
+    /* ============== Main Content Section Mobile Design ============== */
+    .main-section-content {
+        width: 90vw;
+    }
+
+    .do-good-section {
+        width: 100%;
+    }
+
+    .do-good-section p {
+        width: 100%;
+    }
+
+    .everything-you-need-to-know-section {
+        width: 100%;
+    }
+
+    .everything-you-need-to-know-section h1 {
+        width: 100%;
+    }
+
+    .cards-container {
+        flex-direction: column;
+    }
+
+    .card-2 {
+        margin-top: 4rem;
+    }
+
+    .feature-card {
+        width: 100%;
+    }
+
+    .background-box {
+        height: 37rem;
+        width: 0.5rem;
+        position: absolute;
+        top: 87rem;
+        left: 50%;
+    }
+
+    .campaign-grid {
+        grid-template-columns: 100%;
+    }
+
+    .campaign-grid .campaign-card {
+      width: 100%;
+    }
+
+    footer {
+        width: 100vw;
+        background-color: #1b1f41;
+        padding: 3rem 0;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+    }
+
+    .footer-inner ul {
+        padding-left: 0;
+    }
+
+    .footer-inner ul li a {
+        font-size: 15px;
+    }
+
+    .footer-inner-container {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 90%;
+    }
+
+    .social-media-links {
+        width: 38%;
+        align-items: center;  
+    }
+
+    .campaign-details-inner {
+        width: 100%;
+    }
+
+    .campaign-info {
     width: 100%;
-    padding-top: 5rem;
-    display: flex;
+    }
+
+    .campaign-progress {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    }
+
+    .campaign-progress-bar {
+        width: 100%;
+      margin-top: 1rem;
+    }
+
+    .campaign-buttons {
+        flex-direction: column;
+    }
+
+    .campaign-buttons .button {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 }
 
-.hero-text p {
-    width: 100%;
+/* =========== Tablet Design ================== */
+@media screen and (min-width: 768px) {
+    /* ================= Landing Page Hero Section   =================*/
+    .hero-section-inner {
+      width: 80%;
+    }
+
+    .hero-text {
+        width: 100%;
+        padding-top: 10rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-text p {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        width: 100%;
+        font-size: 45px;
+    }
+
+    .hero-section-media {
+        display: none;
+    }
+   /* =================End Of Landing Page Hero Section For Tablet */
+
+    /* ============== Main Content Section Tablet Design ============== */
+    .main-section-content {
+    width: 90vw;
+    }
+
+    .do-good-section {
+    z-index: 20;
+    width: 90%;
+    }
+
+    .do-good-section p {
+        width: 80%;
+    }
+
+    .everything-you-need-to-know-section {
+        width: 100%;
+    }
+
+    .everything-you-need-to-know-section h1 {
+        width: 70%;
+    }
+    .feature-card {
+        height: 16rem;
+    }
+
+    .feature-card h3 {
+        top: 0rem;
+    }
+
+     .feature-card-icon {
+        top: -1rem;
+    }
+    .campaign-grid {
+        grid-template-columns: 48% 48%;
+    }
+    /* =============== Site Footer ========= */
+
+    .footer-inner {
+        padding-bottom: 2rem;
+    }
+
+    .footer-inner ul h3 {
+        text-transform: capitalize;
+    }
+
+    .footer-inner-container {
+        width: 80%;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .social-media-links {
+        width: 25%;
+    }
 }
 
-.hero-text h1 {
-    width: 100%;
-}
+@media screen and (min-width: 1024px) {
+    .hero-section-media {
+        display: none;
+    }
 
-.hero-section-media {
-    display: none;
-}
+    .hero-text {
+            width: 95%;
+            padding-top: 13rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+        }
 
-/* ============== Main Content Section Mobile Design ============== */
-.main-section-content {
-   width: 90vw;
-}
+    .everything-you-need-to-know-section h1 {
+        width: 50%;
+    }
 
-.do-good-section {
-   z-index: 20;
-   width: 100%;
-}
+    .feature-card {
+        height: 15rem;
+    }
 
-.do-good-section p {
-    width: 100%;
-}
+    .do-good-section {
+        width: 70%;
+    }
 
-.everything-you-need-to-know-section {
-    width: 100%;
-}
-
-.everything-you-need-to-know-section h2 {
-    width: 100%;
-}
-
-.cards-container {
-    flex-direction: column;
-}
-
-.card-2 {
-    margin-top: 4rem;
-}
-
-.feature-card {
-    width: 100%;
-}
-
-.background-box {
-    height: 34rem;
-    width: 0.5rem;
-    position: absolute;
-    top: 83rem;
-    left: 50%;
-}
-
-.campaign-grid {
-    display: grid;
-    margin: 2rem 0;
-    grid-template-columns: 100%;
-    grid-gap: 1rem;
-}
-
-.campaign-grid .campaign-card {
-   width: 100%;
-}
-
-footer {
-    width: 100vw;
-    background-color: #1b1f41;
-    padding: 3rem 0;
-}
-
-.footer-inner {
-     flex-direction: column;
-}
-
-.footer-inner ul {
-    padding-left: 0;
-}
-
-.footer-inner ul li a {
-    font-size: 15px;
-}
-
-
-
-.footer-inner-container {
-    flex-direction: column;
-}
-
-.social-media-links {
-    width: 40%;
-    align-items: center;  
-}
+    .campaign-grid {
+        display: grid;
+        margin: 3rem 0;
+        grid-template-columns: repeat(2, 48%);
+        height: auto;
+        grid-gap: 1rem;
+    }
 }

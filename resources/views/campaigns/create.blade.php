@@ -34,7 +34,7 @@
      <div class="form-group">
         <input 
         type="submit" 
-        class="btn btn-dark"
+        class="btn orange-btn"
         name="goal-amount" 
         id=""
         value="Create Campaign">

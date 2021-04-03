@@ -1,10 +1,10 @@
 <footer>
     <div class="footer-inner">
-        <a href="/" class="text-decoration-none pb-2">
+        {{-- <a href="/" class="text-decoration-none pb-2">
              <h3 class="orange-text pb-2">GoFundMe.CMR</h3>
-        </a>
+        </a> --}}
         <ul>
-            <h3>FUNDRAISE FOR</h3>
+            <h3>Fundraise For</h3>
             <li><a href="">Medical</a></li>
             <li><a href="">Emergency</a></li>
             <li><a href="">Memorial</a></li>
@@ -12,7 +12,7 @@
             <li><a href="">Charity</a></li>
         </ul>
         <ul>
-            <h3>LEARN MORE</h3>
+            <h3>Learn More</h3>
             <li><a href="">How GoFundMe.CMR works</a></li>
             <li><a href="">FAQs</a></li>
             <li><a href="">Testimonies</a></li>

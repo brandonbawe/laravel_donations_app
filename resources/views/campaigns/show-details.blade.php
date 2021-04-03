@@ -5,9 +5,26 @@
      <div class="campaign-details-inner">
                 <h1 class="pb-3">{{ $campaign->campaign_name }}</h1>
             <div class="campaign-img">
-
             </div>
-            <p class="pt-3">{{ Str::limit($campaign->campaign_purpose, 500, '...') }}  <a href="" class="orange-text">Read more</a></p>
+            <div class="campaign-info">
+                <div class="campaign-progress">
+                    <h3 class="curly-text">30,000XAF of {{ $campaign->goal_amount }} raised</h3>
+                    <div class="campaign-progress-bar shadow">
+                        <div class="progress-bar-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="campaign-buttons">
+                    
+                        <a href="/campaigns/{{ $campaign->id }}/edit" class="button orange-btn text-center">Donate Now</a>
+                
+                    <a href="" class="button btn-primary text-center">
+                        Share
+                    </a>
+                </div>
+            </div>
+            <p class="pt-3">{{ Str::limit($campaign->campaign_purpose, 2000, '...') }}  <a href="" class="orange-text">Read more</a></p>
             <h3>Organizer</h3>
             <hr>
             <div class="organizer">
@@ -15,11 +32,7 @@
             </div>
      </div>
      
-     <div class="feature-card shadow-lg position-sticky">
-         <p class="pt-2">20,000XAF raised of {{ $campaign->goal_amount }}XAF goal.</p>
-         <a href="/campaigns/{{ $campaign->id }}/edit" class="btn dark-btn">Donate Now <i class="fas fa-donate"></i></a>
-         <a href="" class="btn blue-btn">Share</a>
-     </div>
+
  </div>
 
  @include('layouts.footer')
