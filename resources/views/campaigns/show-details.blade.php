@@ -11,7 +11,7 @@
             <h3>Organizer</h3>
             <hr>
             <div class="organizer">
-                <p class="">{{ Auth::user()->name }}</p>
+                {{-- <p class="">{{ Auth::user()->name }}</p> --}}
             </div>
      </div>
      

@@ -8,7 +8,7 @@
          </h4>
 
          <h4 class="display-3 text-center">
-           Transaction Amount: <b class="text-success">{{ app('request')->input('transaction_amount') }}</b>  
+           Transaction Amount: <b class="text-success">{{ app('request')->input('transaction_amount') }}</b>  XAF
          </h4>
  </div>
 
