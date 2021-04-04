@@ -338,9 +338,150 @@ footer {
 
 /* ============ End of Campaign Details Page Styles ============ */
 
+
+
+/* =========== Tablet Design ================== */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) {
+    /* ================= Landing Page Hero Section   =================*/
+    .hero-section-inner {
+      width: 80%;
+    }
+
+    .hero-text {
+        width: 100%;
+        padding-top: 10rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-text p {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        width: 100%;
+        font-size: 45px;
+    }
+
+    .hero-section-media {
+        display: none;
+    }
+   /* =================End Of Landing Page Hero Section For Tablet */
+
+    /* ============== Main Content Section Tablet Design ============== */
+    .main-section-content {
+    width: 90vw;
+    }
+
+    .do-good-section {
+    z-index: 20;
+    width: 90%;
+    }
+
+    .do-good-section p {
+        width: 80%;
+    }
+
+    .everything-you-need-to-know-section {
+        width: 100%;
+    }
+
+    .everything-you-need-to-know-section h1 {
+        width: 70%;
+    }
+    .feature-card {
+        height: 16rem;
+    }
+
+    .feature-card h3 {
+        top: 0rem;
+    }
+
+     .feature-card-icon {
+        top: -1rem;
+    }
+    .campaign-grid {
+        grid-template-columns: 48% 48%;
+    }
+    /* =============== Site Footer ========= */
+
+    .footer-inner {
+        padding-bottom: 2rem;
+    }
+
+    .footer-inner ul h3 {
+        text-transform: capitalize;
+    }
+
+    .footer-inner-container {
+        width: 80%;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .social-media-links {
+        width: 25%;
+    }
+}
+/* ============== iPad Pro Designs =============== */
+@media only screen 
+  and (min-device-width: 798px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2)  {
+    .hero-section-media {
+        display: none;
+    }
+
+    .hero-text {
+            width: 95%;
+            padding-top: 13rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+    .everything-you-need-to-know-section h1 {
+        width: 50%;
+    }
+
+    .feature-card {
+        height: 15rem;
+    }
+
+    .do-good-section {
+        width: 70%;
+    }
+
+    .campaign-grid {
+        display: grid;
+        margin: 3rem 0;
+        grid-template-columns: repeat(2, 48%);
+        height: auto;
+        grid-gap: 1rem;
+    }
+    .footer-inner ul  {
+        padding-left: 0;
+    }
+
+    .footer-inner-container {
+        width: 90%;
+    }
+
+    .social-media-links {
+        width: 16%;
+    }
+}
+
 /* ============== Mobile Design =================== */
 
-@media screen and (max-width: 540px) {
+@media only screen 
+  and (min-device-width: 280px) 
+  and (max-device-width: 540px) 
+  /* and (-webkit-min-device-pixel-ratio: 3) */ { 
     .hero-section-inner {
         width: 90%;
         display: flex;
@@ -471,125 +612,5 @@ footer {
     .campaign-buttons .button {
         width: 100%;
         margin-bottom: 1rem;
-    }
-}
-
-/* =========== Tablet Design ================== */
-@media screen and (min-width: 768px) {
-    /* ================= Landing Page Hero Section   =================*/
-    .hero-section-inner {
-      width: 80%;
-    }
-
-    .hero-text {
-        width: 100%;
-        padding-top: 10rem;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .hero-text p {
-        width: 100%;
-    }
-
-    .hero-text h1 {
-        width: 100%;
-        font-size: 45px;
-    }
-
-    .hero-section-media {
-        display: none;
-    }
-   /* =================End Of Landing Page Hero Section For Tablet */
-
-    /* ============== Main Content Section Tablet Design ============== */
-    .main-section-content {
-    width: 90vw;
-    }
-
-    .do-good-section {
-    z-index: 20;
-    width: 90%;
-    }
-
-    .do-good-section p {
-        width: 80%;
-    }
-
-    .everything-you-need-to-know-section {
-        width: 100%;
-    }
-
-    .everything-you-need-to-know-section h1 {
-        width: 70%;
-    }
-    .feature-card {
-        height: 16rem;
-    }
-
-    .feature-card h3 {
-        top: 0rem;
-    }
-
-     .feature-card-icon {
-        top: -1rem;
-    }
-    .campaign-grid {
-        grid-template-columns: 48% 48%;
-    }
-    /* =============== Site Footer ========= */
-
-    .footer-inner {
-        padding-bottom: 2rem;
-    }
-
-    .footer-inner ul h3 {
-        text-transform: capitalize;
-    }
-
-    .footer-inner-container {
-        width: 80%;
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .social-media-links {
-        width: 25%;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .hero-section-media {
-        display: none;
-    }
-
-    .hero-text {
-            width: 95%;
-            padding-top: 13rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            flex-direction: column;
-        }
-
-    .everything-you-need-to-know-section h1 {
-        width: 50%;
-    }
-
-    .feature-card {
-        height: 15rem;
-    }
-
-    .do-good-section {
-        width: 70%;
-    }
-
-    .campaign-grid {
-        display: grid;
-        margin: 3rem 0;
-        grid-template-columns: repeat(2, 48%);
-        height: auto;
-        grid-gap: 1rem;
     }
 }
