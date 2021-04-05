@@ -3,7 +3,7 @@
 @section('content')
   <div class="container">
     
-      <a href="{{ url('campaigns/create') }}" class="btn btn-primary">Create A Campaign</a>
+      <a href="{{ url('campaigns/create') }}" class="btn orange-btn">Create A Campaign</a>
      <table class="table table-bordered table-striped my-5">
     <thead>
       <tr>

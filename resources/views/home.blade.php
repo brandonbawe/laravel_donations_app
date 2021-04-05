@@ -98,7 +98,7 @@
                     <p class="text-dark">
                         {{Str::limit($campaign->campaign_purpose, 200)}}
                     </p>
-                    <p class="orange-text"><b>2000XAF raised of {{ $campaign->goal_amount }}XAF</b></p>
+                    <p class="curly-text"><b>2000XAF raised of {{ $campaign->goal_amount }}XAF</b></p>
                   </div>
             </div>
           </a>
