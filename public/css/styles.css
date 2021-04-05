@@ -1,4 +1,12 @@
 @import url(https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap);
+.page-header {
+    background: linear-gradient(
+    to top,
+    rgba(27, 31, 65, 0.90) 0%,
+    rgba(27, 31, 65, 0.925) 100%
+  );
+}
+
 body {
     background-color: #d8dae041;
 }
