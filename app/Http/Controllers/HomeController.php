@@ -26,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $campaigns = DB::table('campaigns')->get();
+        $campaigns = Campaign::paginate(6);
         return view('home', ['campaigns' => $campaigns]);
     }
 
