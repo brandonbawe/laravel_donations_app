@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
 @import url('./header.css');
+@import url('./how-it-works.css');
 body {
     background-color: #d8dae041;
 }
@@ -191,6 +192,14 @@ h1 {
     border-radius: 50%;
     position: relative;
     top: -2rem;
+}
+
+.feature-card-icon  svg {
+    width: 70%;
+}
+
+.efficient svg {
+    width: 60%;
 }
 
 .background-box {
@@ -543,7 +552,10 @@ footer {
     .feature-card {
         width: 100%;
     }
-
+     .feature-card-icon {
+        width: 18%;
+    }
+    
     .background-box {
         height: 35rem;
         width: 0.5rem;

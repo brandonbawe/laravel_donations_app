@@ -200,6 +200,14 @@ h1 {
     top: -2rem;
 }
 
+.feature-card-icon  svg {
+    width: 70%;
+}
+
+.efficient svg {
+    width: 60%;
+}
+
 .background-box {
     height: 0.5rem;
     background-color: #ed6754;
@@ -550,7 +558,10 @@ footer {
     .feature-card {
         width: 100%;
     }
-
+     .feature-card-icon {
+        width: 18%;
+    }
+    
     .background-box {
         height: 35rem;
         width: 0.5rem;
