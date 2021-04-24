@@ -2,8 +2,7 @@
 
 @section('content')
   <div class="hero-section">
-    <div class="background-overlay">
-      <div class="hero-section-inner">
+     <div class="hero-section-inner">
         <div class="hero-text">
         <h1>Answer a call Today to help <span class="orange-text"> Someone in need</span></h1>
         <p class="lead py-2 gray-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, doloremque. Placeat itaque non ipsam minima quo provident. Culpa, nisi! Rerum similique illum ipsa maxime </p>
@@ -31,8 +30,6 @@
          </div>
       </div>
       </div>
-      
-    </div>
   </div>
 
 
